@@ -1,0 +1,11 @@
+---
+- hosts: debian-0
+  tasks:
+    - name: Installer Apache
+      ansible.builtin.apt:
+        name={{ item }} state=present 
+      loop:
+        - php
+        - apache2
+  
+

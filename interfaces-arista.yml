@@ -1,0 +1,7 @@
+---
+- hosts: arista
+  tasks:
+  - name: Gather only the config and default facts
+    arista.eos.eos_facts:
+      gather_subset:
+      - interface

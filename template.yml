@@ -1,0 +1,10 @@
+---
+- hosts: debian
+  tasks:
+    - name: Copier template
+      ansible.builtin.template:
+        src: template-conf.j2
+        dest: /etc/apache2/portss.config
+        owner: www-data
+        group: www-data
+        mode: 0664

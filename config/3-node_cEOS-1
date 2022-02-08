@@ -1,0 +1,20 @@
+! Startup-config last modified at Tue Feb  8 15:46:56 2022 by root
+! device: localhost (cEOSLab, EOS-4.25.0F-19426669.4250F (engineering build))
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username aaa privilege 15 secret sha512 $6$1iaePamANVP5ecZW$nAqeflzfWs5nA2TPnNA8rmwaqq7jdsTQ4NwlO8.ILr9WFrMLbuICPr1WGM0WrvcE8V6u1/l1YYwp0Oasi6rRF1
+!
+interface Ethernet1
+!
+interface Ethernet2
+!
+no ip routing
+!
+end

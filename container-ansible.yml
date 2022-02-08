@@ -1,0 +1,12 @@
+---
+- hosts: moi-1
+  tasks:
+  - name: Create container
+    docker_container:
+      name: 203-debian-mine
+      image: registry.iutbeziers.fr/debianiut
+      state: started
+      exposed_ports:
+        - 80
+      volumes:
+        - /data
